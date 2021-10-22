@@ -1,0 +1,23 @@
+<h3>Display toggle</h3>
+<hr>
+
+<button class="btn btn-primary"
+(click)="toggleDisplay()"
+>Display Details</button>
+
+<p *ngIf="display">Secret password ng if</p>
+<hr>
+<p>{{counter}}</p>
+<hr>
+<!-- <p *ngFor="let count of countArr"
+[ngClass]="{line: count>5 }"
+[ngStyle]="{backgroundColor: count > 5 ? 'blue':'' }"
+>{{count}}</p> -->
+
+<p *ngFor="let count of countArr; let i = index"
+[ngClass]="{line: i>4 }"
+[ngStyle]="{backgroundColor: i > 4 ? 'blue':'' }"
+>{{count}}</p>
+
+
+
